@@ -1,0 +1,32 @@
+<!-- Markup -->
+<!--Ershad Raoufi-->
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <h1>Heading 1</h1>
+    <GeoLocation 
+            status=1
+            data-error='My Error Message' 
+            pos-lat='39.03444' 
+            pos-lng='56.344'></GeoLocation>
+
+            <label for="lat">lat</label>
+            <p id="lat"></p>
+            <label for="lng">lng</label>
+            <p id="lng"></p>
+
+            <script>
+                let lng = document.getElementById("lng");
+                let lat = document.getElementById("lat");
+                const geo = document.getElementsByTagName("GeoLocation")[0];
+                lat.innerHTML =  geo.attributes["pos-lat"].value;
+                lng.innerHTML =  geo.attributes["pos-lng"].value;
+            </script>
+          
+           
+    
+</body>
+</html>
